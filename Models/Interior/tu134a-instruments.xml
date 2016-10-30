@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<PropertyList>
+
+  <!-- Autopilot -->
+<!--
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/ap/ap.xml</path>
+    <offsets>
+      <x-m>  0.30 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.52 </z-m>
+    </offsets>
+  </model>
+-->
+
+  <!-- left panel -->
+  <!-- Cross -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/divers/cross1.ac</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.565 </y-m>
+      <z-m>  0.050 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ABSU WARNINGS -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/indicators/indicators1.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.505 </y-m>
+      <z-m>  0.205 </z-m>
+    </offsets>
+  </model>
+
+  <!-- AI 2 -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/agb/agb.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.380 </y-m>
+      <z-m>  0.225 </z-m>
+    </offsets>
+  </model>
+
+  <!-- bank angle -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.790 </y-m>
+      <z-m>  0.040 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.680 </y-m>
+      <z-m>  0.070 </z-m>
+    </offsets>
+  </model>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m>  0.110 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/var/var-30.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.460 </y-m>
+      <z-m>  0.070 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Radio ALT -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/rv-5m/rv-5m.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.355 </y-m>
+      <z-m>  0.070 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/kus730/kus730.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.880 </y-m>
+      <z-m> -0.020 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Mach -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/um-1/um-1.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.770 </y-m>
+      <z-m> -0.060 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VOR/ADF -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/iku-1/iku-1_l.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.675 </y-m>
+      <z-m> -0.035 </z-m>
+    </offsets>
+  </model>
+
+  <!-- HSI -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/nkp-4/nkp-4.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -0.015 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT (m) -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/uvid-15/uvid-15-m.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.465 </y-m>
+      <z-m> -0.032 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT (ft) -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/uvo/uvo.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.360 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+  </model>
+
+  <!-- electrical -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/electrical/v-27.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.900 </y-m>
+      <z-m> -0.135 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/var/var-75.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.790 </y-m>
+      <z-m> -0.165 </z-m>
+    </offsets>
+  </model>
+
+  <!-- temperature outside -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/tnv-15/tnv-15.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.620 </y-m>
+      <z-m> -0.160 </z-m>
+    </offsets>
+  </model>
+
+  <!-- DME -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/idr-1/idr-1.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.540 </y-m>
+      <z-m> -0.130 </z-m>
+    </offsets>
+  </model>
+
+  <!-- compass -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/ppda/ppda.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.455 </y-m>
+      <z-m> -0.140 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Gear -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/gear/gear.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.360 </y-m>
+      <z-m> -0.125 </z-m>
+    </offsets>
+  </model>
+
+  <!-- central panel -->
+  <!-- aoa and g-meter -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/uap-12/uap-12.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.215 </y-m>
+      <z-m>  0.280 </z-m>
+    </offsets>
+  </model>
+
+  <!-- engine temp -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/ut/ut7a_1.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.107 </y-m>
+      <z-m>  0.280 </z-m>
+    </offsets>
+  </model>
+
+  <!-- engine rpm -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/ite/ite.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.280 </z-m>
+    </offsets>
+  </model>
+
+  <!-- engine temp -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/ut/ut7a_2.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.107 </y-m>
+      <z-m>  0.280 </z-m>
+    </offsets>
+  </model>
+
+  <!-- clock -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/achs/achs.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.215 </y-m>
+      <z-m> 0.280 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Manometer -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/manometer/mano.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.240 </y-m>
+      <z-m>  0.155 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Manometer -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/manometer/mano.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.240 </y-m>
+      <z-m>  0.155 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Landing lights -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.235 </y-m>
+      <z-m>  0.200 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Landing lights -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/divers/instrument-lights.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.235 </y-m>
+      <z-m> 0.200 </z-m>
+    </offsets>
+  </model>
+
+  <!-- oil temperature -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/uiz/uiz_1.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.135 </y-m>
+      <z-m>  0.170 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ENGINES WARNING -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/Warnings/engines.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.170 </z-m>
+    </offsets>
+  </model>
+
+  <!-- oil temperature -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/uiz/uiz_2.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.135 </y-m>
+      <z-m> 0.170 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT (ft) -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/uvid-15/uvid-15-ft.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.220 </y-m>
+      <z-m>  0.065 </z-m>
+    </offsets>
+  </model>
+
+  <!-- AP WARNING -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/Warnings/ap.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.125 </y-m>
+      <z-m>  0.040 </z-m>
+    </offsets>
+  </model>
+
+  <!-- vor/rsbn settings -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/psp/psp.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.045 </z-m>
+    </offsets>
+  </model>
+
+  <!-- fuel meter -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/fuel_meter/fuel_meter_1.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.119 </y-m>
+      <z-m>  0.045 </z-m>
+    </offsets>
+  </model>
+
+  <!-- fuel meter -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/fuel_meter/fuel_meter_2.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.224 </y-m>
+      <z-m>  0.045 </z-m>
+    </offsets>
+  </model>
+
+  <!-- AT -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/at/at.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.142 </y-m>
+      <z-m> -0.075 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COM-1 -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/com/com-1.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.142 </y-m>
+      <z-m> -0.075 </z-m>
+    </offsets>
+  </model>
+
+  <!-- right panel -->
+  <!-- Cross -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/divers/cross2.ac</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.565 </y-m>
+      <z-m>  0.050 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ABSU WARNINGS -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/indicators/indicators2.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.505 </y-m>
+      <z-m>  0.205 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TURN -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.355 </y-m>
+      <z-m> 0.260 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/kus730/kus730.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.355 </y-m>
+      <z-m> 0.157 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Mach -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/um-1/um-1.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.355 </y-m>
+      <z-m> 0.054 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.455 </y-m>
+      <z-m> 0.075 </z-m>
+    </offsets>
+  </model>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.570 </y-m>
+      <z-m> 0.120 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/var/var-30.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.690 </y-m>
+      <z-m> 0.065 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Cabin pressure -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/uvpd/uvpd.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.355 </y-m>
+      <z-m>-0.050 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VOR/ADF -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/iku-1/iku-1_r.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.455 </y-m>
+      <z-m>-0.030 </z-m>
+    </offsets>
+  </model>
+
+  <!-- HSI -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/nkp-4/nkp-4.xml</path>
+    <offsets>
+      <x-m>  0.002 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -0.010 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT (m) -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/uvid-15/uvid-15-m.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.690 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Radio ALT -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/rv-5m/rv-5m.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.795 </y-m>
+      <z-m>  0.010 </z-m>
+    </offsets>
+  </model>
+
+  <!-- DME -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/idr-1/idr-1.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.875 </y-m>
+      <z-m> -0.030 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/var/var-30_lamp.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.895 </y-m>
+      <z-m> -0.130 </z-m>
+    </offsets>
+  </model>
+</PropertyList>

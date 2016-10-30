@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<PropertyList>
+
+  <!-- Cockpit -->
+  <!-- Seats -->
+  <model>
+    <path>pilotseat.ac</path>
+    <offsets>
+      <x-m> -14.96 </x-m>
+      <y-m>  -0.55 </y-m>
+      <z-m>  -1.20 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>pilotseat.ac</path>
+    <offsets>
+      <x-m> -14.96 </x-m>
+      <y-m>   0.55 </y-m>
+      <z-m>  -1.20 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Cabine -->
+  <!-- Left -->
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -9.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -9.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -8.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -8.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -7.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -7.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -6.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -6.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -4.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -4.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -3.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -3.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -2.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -2.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m>  1.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m>  1.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m>  2.000 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m>  2.000 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m>  3.100 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m>  3.100 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m>  4.300 </x-m>
+      <y-m> -1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatL.ac</path>
+    <offsets>
+      <x-m>  4.300 </x-m>
+      <y-m> -0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right -->
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -9.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -9.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -8.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -8.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -7.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -7.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -6.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -6.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -4.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -4.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -3.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -3.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -2.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -2.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m> -1.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m>  1.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m>  1.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m>  2.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m>  2.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m>  3.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m>  3.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m>  4.000 </x-m>
+      <y-m>  1.070 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seatR.ac</path>
+    <offsets>
+      <x-m>  4.000 </x-m>
+      <y-m>  0.570 </y-m>
+      <z-m> -1.400 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

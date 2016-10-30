@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<PropertyList>
+  <path>tu134a-interior.ac</path>
+
+  <animation>
+    <type>select</type>
+    <object-name>top_left</object-name>
+    <object-name>top_left_in</object-name>
+    <object-name>top_center</object-name>
+    <object-name>top_center_in</object-name>
+    <object-name>top_right</object-name>
+    <object-name>top_right_in</object-name>
+    <object-name>yoke_l1</object-name>
+    <object-name>yoke_l2</object-name>
+    <object-name>yoke_r1</object-name>
+    <object-name>yoke_r2</object-name>
+    <condition>
+      <not>
+        <property>Tu-134/debug</property>
+      </not>
+    </condition>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/tu134a/Models/Effects/glass/glass</inherits-from>
+    <object-name>intwindows</object-name>
+    <object-name>intdoorwindow</object-name>
+    <object-name>intnosewindows</object-name>
+  </effect>
+  
+  <!-- Seats -->
+  <model>
+    <name>Seats</name>
+    <path>Aircraft/tu134a/Models/Interior/Seats/All-Seats.xml</path>
+  </model>
+
+  <animation>
+    <type>material</type>
+    <object-name>panel1</object-name>
+    <object-name>panel2</object-name>
+    <object-name>panel3</object-name>
+    <object-name>cross_left</object-name>
+    <object-name>cockpit3</object-name>
+    <emission>
+      <factor-prop>Tu-134/instrument-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.8 </green>
+      <blue>  0.3 </blue>
+    </emission>
+  </animation>
+
+  <!-- cockpit panels -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/tu134a-instruments.xml</path>
+    <offsets>
+      <x-m> -15.869 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -0.872 </z-m>
+    </offsets>
+  </model>
+
+<animation>
+  <type>rotate</type>
+  <object-name>yoke_l1</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>50</factor>
+  <center>
+    <x-m>-16.056</x-m>
+    <y-m>-0.564</y-m>
+    <z-m>-0.845</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>yoke_l1</object-name>
+  <object-name>yoke_l2</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>6</factor>
+  <center>
+    <x-m>-15.681</x-m>
+    <y-m>  0.0</y-m>
+    <z-m> -1.522</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>yoke_r1</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>50</factor>
+  <center>
+    <x-m>-16.056</x-m>
+    <y-m> 0.564</y-m>
+    <z-m>-0.845</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>yoke_r1</object-name>
+  <object-name>yoke_r2</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>6</factor>
+  <center>
+    <x-m>-15.681</x-m>
+    <y-m>  0.0</y-m>
+    <z-m> -1.522</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+  <!-- Door -->
+  <animation>
+    <name>IntLaPorte</name>
+    <object-name>intdoor</object-name>
+    <object-name>intdoorwindow</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntLaPorte</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>IntLaPorte</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 90 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -10.80 </x-m>
+      <y-m>  -1.20 </y-m>
+      <z-m>   0.00 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z>  1 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!--
+#############################################################################
+#    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM,                 #
+# 2d & 3d instruments, animations, systems and over.                        #
+#     yurik@megasignal.com                                                  #
+#                                                                           #
+# Updated by Helijah August 2012                                            #
+#                    August 2014                                            #
+#############################################################################   
+-->
+
+<!-- Comm radio control 3D instrument for Tu-154 -->
+<PropertyList>
+  
+  <path>at.ac</path>
+  
+  <animation>
+    <type>material</type>
+    <object-name>At_btn</object-name>
+    <object-name>Sg1_btn</object-name>
+    <object-name>Sg2_btn</object-name>
+    <object-name>atlight</object-name>
+    <object-name>Pwr_sw</object-name>
+    <object-name>Drv_sw</object-name>
+    <emission>
+      <factor-prop>Tu-134/instrument-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+    </emission>
+  </animation>
+  
+</PropertyList>

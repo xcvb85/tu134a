@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM, 	  	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<!-- Fuel meter 
+3D instrument for Tu-134 -->
+<PropertyList>
+ <path>fuel_meter.ac</path>
+
+  <!-- Internal instruments lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>base</object-name>
+    <object-name>knob</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>Tu-134/instrument-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+    </emission>
+  </animation>
+
+<animation>
+    <type>noshadow</type>
+    <object-name>glass</object-name>
+  </animation>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/tu134a/Models/Effects/glass/glass_shader.png</texture>
+    <object-name>glass</object-name>
+  </animation>
+
+<!-- Needles -->
+<animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>consumables/fuel/tank[5]/level-kg</property> <!-- TODO -->
+
+    <!--Fuel kg -->
+    <interpolation>
+      <entry><ind>    0</ind>	<dep>-170</dep></entry>
+      <entry><ind> 8000</ind>	<dep> 170</dep></entry>
+    </interpolation>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+</PropertyList>

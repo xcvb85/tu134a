@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+   <name>autopilot-dlg</name>
+   <layout>vbox</layout>
+   <group>
+      <layout>hbox</layout>
+      <empty>
+         <stretch>1</stretch>
+      </empty>
+      <text>
+         <label>Autopilot</label>
+      </text>
+      <empty>
+         <stretch>1</stretch>
+      </empty>
+      <button>
+         <pref-width>16</pref-width>
+         <pref-height>16</pref-height>
+         <legend />
+         <default>1</default>
+         <keynum>27</keynum>
+         <border>2</border>
+         <binding>
+            <command>dialog-close</command>
+         </binding>
+         <binding>
+            <command>dialog-apply</command>
+         </binding>
+      </button>
+   </group>
+   <hrule />
+   <nasal>
+        <open>
+      ## autopilot gui class
+      #
+      APGui = {
+          new : func() {
+              var m = { parents: [APGui] };
+              var modes = ["dg-heading-hold", "wing-leveler", "nav1-hold"];
+              m.modes = [];
+
+              m.lockPitch = props.globals.getNode("/autopilot/locks/altitude", 1);
+              m.lockRoll = props.globals.getNode("/autopilot/locks/heading", 1);
+              m.lockAt = props.globals.getNode("/autopilot/locks/speed", 1);
+              m.verticalSpeed = props.globals.getNode("/autopilot/settings/vertical-speed-fpm", 1);
+
+              m.powerAp = dlg.getNode("power-ap", 1);
+              m.powerAt = dlg.getNode("power-at", 1);
+              m.channelPitch = dlg.getNode("channel-pitch", 1);
+              m.channelPitchStatus = dlg.getNode("pitch-status", 1);
+              m.channelPitchInfo = dlg.getNode("pitch-info", 1);
+              m.channelRoll = dlg.getNode("channel-roll", 1);
+              m.channelRollInfo = dlg.getNode("roll-info", 1);
+              m.channelRollStatus = dlg.getNode("roll-status", 1);
+              m.headingMode = dlg.getNode("heading-mode", 1); # for 3d model
+              m.actHeadingMode = dlg.getNode("act-heading-mode", 1); # for tablo
+
+              foreach (var o; modes) {
+                  var node = dlg.getNode(o);
+                  if (node == nil) {
+                      node = dlg.getNode(o, 1);
+                      node.setBoolValue(0);
+                  }
+                  append(m.modes, node);
+              }
+
+              # first start
+              if(!m.modes[0].getBoolValue() and !m.modes[1].getBoolValue() and !m.modes[2].getBoolValue()) {
+                m.modes[1].setBoolValue(1);
+                m.channelPitchInfo.setValue("off");
+                m.channelRollInfo.setValue("off");
+                m.channelPitchStatus.setIntValue(0);
+                m.channelRollStatus.setIntValue(0);
+              }
+
+              return m;
+          },
+
+          ## handle radiobuttons
+          #
+          rbApHeading : func(mode) {
+              var i = 0;
+
+              foreach (var o; me.modes) {
+                  if(o.getName() == mode) {
+                      o.setIntValue(1);
+                      me.headingMode.setIntValue(i);
+                  } else {
+                      o.setBoolValue(0);
+                  }
+                  i=i+1;
+              }
+          },
+
+          ## handle AP power checkbox
+          #  0: off, 1: disabled, 2: active
+          cbApPower : func {
+              if(me.powerAp.getValue()) {
+                if(me.channelPitch.getValue()) {
+                  me.channelPitchInfo.setValue("disabled");
+                  me.channelPitchStatus.setIntValue(1);
+                } else {
+                  me.lockPitch.setValue("");
+                  me.channelPitchInfo.setValue("off");
+                  me.channelPitchStatus.setIntValue(0);
+                }
+
+                if(me.channelRoll.getValue()) {
+                  me.channelRollInfo.setValue("disabled");
+                  me.channelRollStatus.setIntValue(1);
+                } else {
+                  me.lockRoll.setValue("");
+                  me.channelRollInfo.setValue("off");
+                  me.channelRollStatus.setIntValue(0);
+                }
+              } else {
+                me.lockPitch.setValue("");
+                me.channelPitchInfo.setValue("off");
+                me.channelPitchStatus.setIntValue(0);
+                me.lockRoll.setValue("");
+                me.channelRollInfo.setValue("off");
+                me.channelRollStatus.setIntValue(0);
+              }
+          },
+
+          ## handle pitch channel checkbox
+          #
+          cbApPitchChannel : func {
+              if(me.powerAp.getValue()) {
+                if(me.channelPitch.getValue()) {
+                  me.channelPitchInfo.setValue("disabled");
+                  me.channelPitchStatus.setIntValue(1);
+                } else {
+                  me.channelPitchInfo.setValue("off");
+                  me.channelPitchStatus.setIntValue(0);
+                }
+              }
+          },
+
+          ## handle roll channel checkbox
+          #
+          cbApRollChannel : func {
+              if(me.powerAp.getValue()) {
+                if(me.channelRoll.getValue()) {
+                  me.channelRollInfo.setValue("disabled");
+                  me.channelRollStatus.setIntValue(1);
+                }else{
+                  me.lockRoll.setValue("");
+                  me.channelRollInfo.setValue("off");
+                  me.channelRollStatus.setIntValue(0);
+                }
+              }
+          },
+
+          ## handle activate button
+          #
+          btApActivate : func {
+              if(me.channelPitchStatus.getValue()==1) {
+                me.channelPitchInfo.setValue("active");
+                me.channelPitchStatus.setIntValue(2);
+              }
+              if(me.channelRollStatus.getValue()==1) {
+                me.channelRollInfo.setValue("active");
+                me.channelRollStatus.setIntValue(2);
+              }
+          },
+
+          ## handle heading button
+          #
+          btApHeading : func {
+              if(me.channelRollStatus.getValue()==2)
+              {
+                var i = 0;
+
+                foreach (var o; me.modes) {
+                  if(o.getBoolValue()) {
+                    me.lockRoll.setValue(o.getName());
+                    me.actHeadingMode.setIntValue(i);
+                  }
+                  i = i + 1;
+                }
+              }
+          },
+
+          ## handle stabilize height button
+          #
+          btApStabHeight : func {
+              if(me.channelPitchStatus.getValue()==2)
+              {
+                me.lockPitch.setValue("vertical-speed-hold");
+                me.verticalSpeed.setIntValue(0);
+              }
+          },
+
+          ## handle glideslope button
+          #
+          btApGlideslope : func {
+              if(me.channelPitchStatus.getValue()==2)
+              {
+                me.lockPitch.setValue("gs1-hold");
+              }
+          },
+
+          ## handle AT power checkbox
+          #
+          cbAtPower : func {
+              if(!me.powerAt.getBoolValue())
+              {
+                me.lockAt.setValue("");
+              }
+          },
+
+          ## handle down button
+          #
+          btApDown : func {
+              var vspeed = me.verticalSpeed.getValue();
+
+              if(vspeed > -2000)
+              {
+                vspeed = vspeed - 250;
+                me.verticalSpeed.setDoubleValue(vspeed);
+              }
+          },
+
+          ## handle down button
+          #
+          btApUp : func {
+              var vspeed = me.verticalSpeed.getValue();
+
+              if(2000 > vspeed)
+              {
+                vspeed = vspeed + 250;
+                me.verticalSpeed.setDoubleValue(vspeed);
+              }
+          },
+
+          ## handle AT button
+          #
+          btAtActivate : func {
+              if(me.powerAt.getBoolValue())
+              {
+                  var speed = props.globals.getNode("/instrumentation/airspeed-indicator/indicated-speed-kt", 1).getValue();
+                  props.globals.getNode("/autopilot/settings/target-speed-kt", 1).setValue(speed);
+                  me.lockAt.setValue("speed-with-throttle");
+              }
+          },
+
+          ## handle deactivate buttons
+          #
+          btAtDeactivate : func {
+              me.lockAt.setValue("");
+          },
+      };
+
+      ## create and initialize input field properties if necessary
+      #
+      var apset = props.globals.getNode("/autopilot/settings", 1);
+      foreach (var p; ["heading-bug-deg", "true-heading-deg", "vertical-speed-fpm",
+                       "target-pitch-deg", "target-aoa-deg", "target-altitude-ft",
+                       "target-agl-ft", "target-speed-kt"]) {
+
+          if ((var n = apset.getNode(p)) == nil or n.getType() == "NONE") {
+              apset.getNode(p, 1).setDoubleValue(0);
+          }
+      }
+
+      var dlg = props.globals.getNode("/sim/gui/dialogs/autopilot", 1);
+      var apg = APGui.new();
+    </open>
+   </nasal>
+
+   <!--  AP controller  -->
+   <group>
+      <layout>vbox</layout>
+   <group>
+      <layout>hbox</layout>
+   <group>
+      <layout>vbox</layout>
+         <pref-width>90</pref-width>
+      <text>
+         <label>Roll Channel:</label>
+      </text>
+        <input>
+            <pref-width>70</pref-width>
+            <pref-height>20</pref-height>
+            <property>/sim/gui/dialogs/autopilot/roll-info</property>
+            <live>true</live>
+        </input>
+      </group>
+
+      <dial>
+         <pref-width>70</pref-width>
+         <pref-height>70</pref-height>
+         <property>/autopilot/settings/vertical-speed-fpm</property>
+         <min>-3000</min>
+         <max>3000</max>
+         <wrap>false</wrap>
+         <binding>
+            <command>dialog-apply</command>
+         </binding>
+         <binding>
+            <command>dialog-update</command>
+         </binding>
+      </dial>
+   <group>
+      <layout>vbox</layout>
+         <pref-width>90</pref-width>
+      <text>
+         <label>Pitch Channel:</label>
+      </text>
+        <input>
+            <pref-width>70</pref-width>
+            <pref-height>20</pref-height>
+            <property>/sim/gui/dialogs/autopilot/pitch-info</property>
+            <live>true</live>
+        </input>
+      </group>
+
+      </group>
+      <group>
+         <layout>table</layout>
+         <button>
+            <legend>Heading</legend>
+            <row>0</row>
+            <col>0</col>
+            <pref-height>40</pref-height>
+            <pref-width>100</pref-width>
+            <binding>
+               <command>nasal</command>
+               <script>apg.btApHeading()</script>
+            </binding>
+         </button>
+         <button>
+            <legend>Glideslope</legend>
+            <row>0</row>
+            <col>1</col>
+            <pref-height>40</pref-height>
+            <pref-width>100</pref-width>
+            <binding>
+               <command>nasal</command>
+               <script>apg.btApGlideslope()</script>
+            </binding>
+         </button>
+         <button>
+            <legend>DN</legend>
+            <row>0</row>
+            <col>2</col>
+            <pref-height>40</pref-height>
+            <pref-width>30</pref-width>
+            <binding>
+               <command>nasal</command>
+               <script>apg.btApDown()</script>
+            </binding>
+         </button>
+         <button>
+            <legend>Activate</legend>
+            <row>1</row>
+            <col>0</col>
+            <pref-height>40</pref-height>
+            <pref-width>100</pref-width>
+            <binding>
+               <command>nasal</command>
+               <script>apg.btApActivate()</script>
+            </binding>
+         </button>
+         <button>
+            <legend>Stabilize Height</legend>
+            <row>1</row>
+            <col>1</col>
+            <pref-height>40</pref-height>
+            <pref-width>100</pref-width>
+            <binding>
+               <command>nasal</command>
+               <script>apg.btApStabHeight()</script>
+            </binding>
+         </button>
+         <button>
+            <legend>UP</legend>
+            <row>1</row>
+            <col>2</col>
+            <pref-height>40</pref-height>
+            <pref-width>30</pref-width>
+            <binding>
+               <command>nasal</command>
+               <script>apg.btApUp()</script>
+            </binding>
+         </button>
+      </group>
+      <group>
+         <layout>table</layout>
+         <checkbox>
+            <label>Power</label>
+            <halign>left</halign>
+            <row>0</row>
+            <col>0</col>
+            <property>/sim/gui/dialogs/autopilot/power-ap</property>
+            <live>true</live>
+            <binding>
+               <command>dialog-apply</command>
+            </binding>
+            <binding>
+               <command>nasal</command>
+               <script>apg.cbApPower()</script>
+            </binding>
+         </checkbox>
+         <checkbox>
+            <label>Roll Channel</label>
+            <halign>left</halign>
+            <row>1</row>
+            <col>0</col>
+            <property>/sim/gui/dialogs/autopilot/channel-roll</property>
+            <binding>
+               <command>dialog-apply</command>
+            </binding>
+            <binding>
+               <command>nasal</command>
+               <script>apg.cbApRollChannel()</script>
+            </binding>
+         </checkbox>
+         <checkbox>
+            <label>Pitch Channel</label>
+            <halign>left</halign>
+            <row>2</row>
+            <col>0</col>
+            <property>/sim/gui/dialogs/autopilot/channel-pitch</property>
+            <binding>
+               <command>dialog-apply</command>
+            </binding>
+            <binding>
+               <command>nasal</command>
+               <script>apg.cbApPitchChannel()</script>
+            </binding>
+         </checkbox>
+         <radio>
+            <label>Heading Bug</label>
+            <halign>left</halign>
+            <row>0</row>
+            <col>1</col>
+            <property>/sim/gui/dialogs/autopilot/dg-heading-hold</property>
+            <live>true</live>
+            <binding>
+               <command>nasal</command>
+               <script>apg.rbApHeading("dg-heading-hold")</script>
+            </binding>
+         </radio>
+         <radio>
+            <label>Wings Level</label>
+            <halign>left</halign>
+            <row>1</row>
+            <col>1</col>
+            <property>/sim/gui/dialogs/autopilot/wing-leveler</property>
+            <live>true</live>
+            <binding>
+               <command>nasal</command>
+               <script>apg.rbApHeading("wing-leveler")</script>
+            </binding>
+         </radio>
+         <radio>
+            <label>NAV Course</label>
+            <halign>left</halign>
+            <row>2</row>
+            <col>1</col>
+            <property>/sim/gui/dialogs/autopilot/nav1-hold</property>
+            <live>true</live>
+            <binding>
+               <command>nasal</command>
+               <script>apg.rbApHeading("nav1-hold")</script>
+            </binding>
+         </radio>
+      </group>
+      <group>
+         <layout>hbox</layout>
+         <text>
+            <label>Heading:</label>
+         </text>
+         <input>
+            <pref-width>40</pref-width>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <live>true</live>
+            <binding>
+               <command>dialog-apply</command>
+            </binding>
+         </input>
+         <text>
+            <label>V-Speed:</label>
+         </text>
+         <input>
+            <pref-width>60</pref-width>
+            <property>/autopilot/settings/vertical-speed-fpm</property>
+            <live>true</live>
+         </input>
+      </group>
+   </group>
+
+   <!-- Autothrottle -->
+   <group>
+      <layout>hbox</layout>
+      <hrule>
+         <stretch>true</stretch>
+      </hrule>
+      <text>
+         <label>Autothrottle</label>
+      </text>
+      <hrule>
+         <stretch>true</stretch>
+      </hrule>
+   </group>
+   <group>
+      <layout>table</layout>
+      <checkbox>
+         <label>Power</label>
+         <halign>left</halign>
+         <row>0</row>
+         <col>0</col>
+         <property>/sim/gui/dialogs/autopilot/power-at</property>
+         <live>true</live>
+         <binding>
+            <command>dialog-apply</command>
+         </binding>
+         <binding>
+            <command>nasal</command>
+            <script>apg.cbAtPower()</script>
+         </binding>
+      </checkbox>
+      <button>
+         <pref-height>40</pref-height>
+         <pref-width>40</pref-width>
+         <row>0</row>
+         <col>1</col>
+         <legend>AT</legend>
+         <binding>
+            <command>nasal</command>
+            <script>apg.btAtActivate()</script>
+         </binding>
+      </button>
+      <group>
+         <layout>vbox</layout>
+         <row>0</row>
+         <col>2</col>
+         <radio>
+            <label>ASI Left</label>
+            <halign>left</halign>
+         </radio>
+         <radio>
+            <label>ASI Right</label>
+            <halign>left</halign>
+         </radio>
+      </group>
+      <group>
+         <layout>vbox</layout>
+         <row>1</row>
+         <col>0</col>
+         <text>
+            <label>Deactivate</label>
+            <halign>left</halign>
+         </text>
+         <text>
+            <label>for Engine</label>
+            <halign>left</halign>
+         </text>
+      </group>
+      <button>
+         <pref-height>40</pref-height>
+         <pref-width>40</pref-width>
+         <row>1</row>
+         <col>1</col>
+         <legend>l</legend>
+         <binding>
+            <command>nasal</command>
+            <script>apg.btAtDeactivate()</script>
+         </binding>
+      </button>
+      <button>
+         <pref-height>40</pref-height>
+         <pref-width>40</pref-width>
+         <row>1</row>
+         <col>2</col>
+         <legend>ll</legend>
+         <binding>
+            <command>nasal</command>
+            <script>apg.btAtDeactivate()</script>
+         </binding>
+      </button>
+   </group>
+</PropertyList>

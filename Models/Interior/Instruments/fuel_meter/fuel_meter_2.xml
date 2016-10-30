@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM, 	  	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<!-- Fuel meter 
+3D instrument for Tu-134 -->
+<PropertyList>
+
+<!-- Model -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/fuel_meter/fuel_base_2.xml</path>
+  </model>
+
+<!-- Lamp -->
+<model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/divers/lamp2.ac</path>
+</model>
+
+<!-- Shadows -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/divers/shadow1.ac</path>
+  </model>
+
+</PropertyList>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+  <model>
+    <path>3.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.085 </y-m>
+      <z-m> -0.012 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>5.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.017 </y-m>
+      <z-m>  0.021 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>6.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.017 </y-m>
+      <z-m>  0.048 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>9.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.046 </y-m>
+      <z-m> -0.003 </z-m>
+      <roll-deg>-90</roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>16.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.044 </y-m>
+      <z-m>  0.071 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>17.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.044 </y-m>
+      <z-m>  0.053 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>18red.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.143 </y-m>
+      <z-m> -0.066 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>2008.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.005 </y-m>
+      <z-m> -0.012 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>25.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.044 </y-m>
+      <z-m>  0.035 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>32.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.156 </y-m>
+      <z-m> -0.053 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>3403.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.053 </y-m>
+      <z-m>  0.012 </z-m>
+      <roll-deg>-90</roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>35.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.083 </y-m>
+      <z-m> -0.066 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>36.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.036 </y-m>
+      <z-m> -0.066 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>red.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.156 </y-m>
+      <z-m> -0.072 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>green.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.014 </y-m>
+      <z-m>  0.016 </z-m>
+      <roll-deg>-90</roll-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

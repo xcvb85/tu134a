@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+  <path>segment2.ac</path>
+
+  <model>
+    <path>18.ac</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.017 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>red.ac</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.017 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>on</object-name>
+    <condition>
+      <property>Tu-134/indicator-test</property>
+    </condition>
+  </animation>
+
+</PropertyList>

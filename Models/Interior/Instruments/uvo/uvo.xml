@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM, 	  	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<PropertyList>
+
+<!-- Model -->
+  <model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/uvo/uvo_base.xml</path>
+  </model>
+
+<!-- Lamp -->
+<model>
+    <path>Aircraft/tu134a/Models/Interior/Instruments/divers/lamp1.ac</path>
+</model>
+
+</PropertyList>

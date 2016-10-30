@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+  <sim include="Systems/tu134a-views.xml">
+    <startup>
+      <splash-texture>Aircraft/tu134a/Splash/splash1.png</splash-texture>
+      <splash-texture>Aircraft/tu134a/Splash/splash2.png</splash-texture>
+      <splash-texture>Aircraft/tu134a/Splash/splash3.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path>Aircraft/tu134a/Sounds/tu134-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/tu134a/Models/tu134a.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <flaps>
+      <setting>0.00</setting> <!--  0 deg -->
+      <setting>0.33</setting> <!-- 10 deg -->
+      <setting>0.50</setting> <!-- 15 deg -->
+      <setting>0.67</setting> <!-- 20 deg -->
+      <setting>0.83</setting> <!-- 25 deg -->
+      <setting>1.00</setting> <!-- 30 deg -->
+    </flaps>
+    
+    <systems>
+      <path>Aircraft/tu134a/Systems/tu134a-systems.xml</path>
+    </systems>
+    
+    <instrumentation>
+      <path>Aircraft/tu134a/Systems/instrumentation.xml</path>
+    </instrumentation>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <float n="0"  alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1"  alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m">0</float>                    <!--  2 altitude for MP shadow -->
+        <float n="3"  alias="/position/altitude-ft">0</float>                   <!--  3 altitude for smoke -->
+        <float n="4"  alias="/engines/engine[0]/n2"/>
+        <float n="5"  alias="/engines/engine[1]/n2"/>
+        <float n="6"  alias="/controls/engines/engine[0]/throttle"/>
+        <float n="7"  alias="/controls/engines/engine[1]/throttle"/>
+        <float n="8"  alias="/gear/gear[0]/wow/"/>
+        <float n="9"  alias="/gear/gear[1]/wow/"/>
+        <float n="10" alias="/gear/gear[2]/wow/"/>
+        <float n="11" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="12" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="13" alias="/gear/gear[2]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string"/>
+      </generic>
+    </multiplay>
+
+    <help include="Systems/help.xml"/>
+
+    <menubar>
+      <default>
+        <menu n="10">
+          <label>Tu-134A</label>
+          <item>
+            <label>Options</label>
+            <binding>
+              <command>nasal</command>
+              <script>dialogs.options.open()</script>
+            </binding>
+          </item>
+          <item>
+            <label>Select Livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.toggle()</script>
+            </binding>
+          </item>
+          <item>
+            <label>Pushback</label>
+            <name>pushback</name>
+            <binding>
+              <command>dialog-show</command>
+              <dialog-name>pushback</dialog-name>
+            </binding>
+          </item>
+        </menu>
+      </default>
+    </menubar>
+
+  </sim>
+
+  <input>
+    <keyboard include="Systems/tu134a-keyboard.xml"/>
+  </input>
+
+  <controls>
+   <gear>
+    <brake-parking type="bool">1</brake-parking>
+   </gear>
+  </controls>
+
+ <engines>
+  <engine n="0">
+   <running>true</running>
+   <reverser-pos-norm type="double">0</reverser-pos-norm>
+  </engine>
+  <engine n="1">
+   <running>true</running>
+   <reverser-pos-norm type="double">0</reverser-pos-norm>
+  </engine>
+ </engines>
+
+  <consumables>
+    <fuel>
+      <tank n="0"><name>Left wing outer tank</name></tank>
+      <tank n="1"><name>Left wing middle tank</name></tank>
+      <tank n="2"><name>Left wing inner tank</name></tank>
+      <tank n="3"><name>Central tank</name></tank>
+      <tank n="4"><name>Right wing inner tank</name></tank>
+      <tank n="5"><name>Right wing middle tank</name></tank>
+      <tank n="6"><name>Right wing outer tank</name></tank>
+    </fuel>
+  </consumables>
+
+  <payload>
+    <weight>
+      <name type="string">PAX</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">18000</max-lb>
+    </weight>
+  </payload>
+
+<instrumentation>
+  <marker-beacon>
+    <audio-btn type="bool" >false</audio-btn>
+  </marker-beacon>
+</instrumentation>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/tu134a/Nasal/doors.nas</file>
+    </doors>
+    <tu134-jsb>
+      <file>Aircraft/tu134a/Nasal/light.nas</file>
+      <file>Aircraft/tu134a/Nasal/liveries.nas</file>
+    </tu134-jsb>
+    <dialogs>
+      <file>Aircraft/tu134a/Nasal/dialogs.nas</file>
+    </dialogs>
+    <instruments>
+      <file>Aircraft/tu134a/Nasal/instrumentation.nas</file>
+    </instruments>
+  </nasal>
+
+</PropertyList>
+

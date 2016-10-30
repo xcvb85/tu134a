@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="tu134a-common.xml">
+  <sim>
+    <description>Tu-134A (JSBsim)</description>
+    <author>New Version: lastmin-II, xcvb; Original Tu-134: Emmanuel BARANGER and Artem Kovalchuk; some stuff from other models: Yurik V. Nikiforoff, specter</author>
+
+    <rating>
+      <FDM type="int">     4 </FDM>
+      <systems type="int"> 0 </systems>
+      <cockpit type="int"> 3 </cockpit>
+      <model type="int">   5 </model>
+    </rating>
+
+    <flight-model>jsb</flight-model>
+    <aero>tu134a-jsb</aero>
+
+    <model>
+      <pushback>
+        <kp type="double">100</kp>
+        <ki type="double">25</ki>
+        <kd type="double">0</kd>
+        <position-norm type="double">0</position-norm>
+      </pushback>
+    </model>
+  </sim>
+
+ <input>
+  <keyboard>
+   <key n="127">
+    <name>Delete</name>
+    <desc>Toggle Reversers</desc>
+    <binding>
+     <command>nasal</command>
+     <script>reversethrust.togglereverser()</script>
+    </binding>
+   </key>
+  </keyboard>
+ </input>
+
+  <nasal>
+  <reversethrust>
+   <file>Aircraft/tu134a/Nasal/reverse-thrust.nas</file>
+  </reversethrust>
+ </nasal>
+</PropertyList>
